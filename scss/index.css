@@ -76,6 +76,7 @@ body .container .dashboard span.score {
 }
 
 body .container .choices {
+  background-color: red;
   max-width: 600px;
   width: 60vw;
   margin: 0px auto;
@@ -111,6 +112,10 @@ body .container .choices div {
           animation-fill-mode: forwards;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+}
+
+body .container .choices div svg {
+  z-index: 1;
 }
 
 body .container .choices div svg path {
@@ -167,8 +172,10 @@ body .container button.rules {
   padding: 10px 30px;
   font-size: larger;
   position: relative;
-  left: 98%;
+  left: 90%;
   top: 2%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   cursor: pointer;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;

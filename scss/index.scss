@@ -23,7 +23,7 @@ body {
     margin: 0px auto;
     position: relative;
     height: 100vh;
-    hr{
+    hr {
       opacity: 0;
     }
     .dashboard {
@@ -55,6 +55,7 @@ body {
       }
     }
     .choices {
+      background-color: red;
       max-width: 600px;
       width: 60vw;
       margin: 0px auto;
@@ -76,32 +77,34 @@ body {
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
+
         svg {
+          z-index: 1;
           path {
             transition: fill 0.3s;
           }
         }
         &.rock {
           border-color: #f44336;
-          box-shadow:inset 5px 5px 0 0 grey, 5px 5px 0 0 hsl(4, 90%, 40%);
+          box-shadow: inset 5px 5px 0 0 grey, 5px 5px 0 0 hsl(4, 90%, 40%);
           grid-column-start: 2;
           grid-column-end: 4;
           grid-row-start: 2;
         }
         &.paper {
-            border-color: #2196f3;
-            grid-column-start: 1;
-            grid-column-end: 3;
-            grid-row-start: 1;
-            box-shadow:inset 5px 5px 0 0 grey, 5px 5px 0 0 hsl(207, 90%, 35%);
-          }
-          &.scissors {
-            border-color: #ffc107;
-            grid-column-start: 3;
-            grid-column-end: 5;
-            grid-row-start: 1;
-            box-shadow:inset 5px 5px 0 0 grey, 5px 5px 0 0 hsl(45, 100%, 35%);
-          }
+          border-color: #2196f3;
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          box-shadow: inset 5px 5px 0 0 grey, 5px 5px 0 0 hsl(207, 90%, 35%);
+        }
+        &.scissors {
+          border-color: #ffc107;
+          grid-column-start: 3;
+          grid-column-end: 5;
+          grid-row-start: 1;
+          box-shadow: inset 5px 5px 0 0 grey, 5px 5px 0 0 hsl(45, 100%, 35%);
+        }
         &:hover {
           cursor: pointer;
           svg {
@@ -120,8 +123,9 @@ body {
       padding: 10px 30px;
       font-size: larger;
       position: relative;
-      left: 98%;
+      left: 90%;
       top: 2%;
+      transform: translateX(-50%);
       cursor: pointer;
       transition: background 0.3s;
       &:hover {
@@ -130,7 +134,7 @@ body {
       }
     }
   }
-  .rulesdiv{
+  .rulesdiv {
     width: 400px;
     height: 400px;
     background-color: #eee;
@@ -141,10 +145,10 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 100;
   }
-  .blackscreen{
+  .blackscreen {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -154,8 +158,8 @@ body {
   }
 }
 @keyframes fadeAway {
-  100%{
-   display: none;
-   opacity: 0px; 
+  100% {
+    display: none;
+    opacity: 0px;
   }
 }
