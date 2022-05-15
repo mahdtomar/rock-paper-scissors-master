@@ -113,6 +113,10 @@ body {
             }
           }
         }
+        &.away{
+          animation-name: fadeAway;
+          
+        }
       }
     }
     button.rules {

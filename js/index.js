@@ -8,6 +8,7 @@ const choices = document.querySelector(".choices");
 const mainscreen = document.querySelector(".mainscreen");
 const playerText = `<p>You Picked</p>`;
 const pcText = `<p>The House Picked</p>`;
+const choicesList = choices.children;
 // const names = ["rock", "paper", "scissors"]
 // const rock = document.querySelector(".rock");
 // const scissors = document.querySelector(".scissors");
@@ -34,17 +35,39 @@ blackScreen.addEventListener("click", () => {
 });
 
 choices.addEventListener("click", (e) => {
-  let current = e.target;
-  let results = div.cloneNode();
-  let playerChoice = current;
-  let pcChoice = choices.children[1];
-  results.appendChild(current);
-  if (!current.hasAttribute("vassel")) {
-    current.style.backgroundColor = "blue";
-    for (i = 0; i < 3; i++) {
-      // 3 is the number of divs in choices (rock,paper,scissors)
-      choices.remove();
-      mainscreen.append(results);
+  let currentTag = e.target.tagName;
+  let current;
+  if (e.target.className !== "choices") { // to make sure the user click on the choices only 
+    switch (currentTag) { // to get the div element even if the user clicked the svg or the path 
+      case "DIV":
+        current = e.target;
+        console.log(current);
+        break;
+      case "svg":
+        current = e.target.parentElement;
+        console.log(current);
+        break;
+      case "path":
+        current = e.target.parentElement.parentElement;
+        console.log(current);
+        break;
+      default:
+        break;
+    }
+    for (i = 0; i < choicesList.length; i++) {
+      if(choicesList[i] == current){
+        console.log("yes it matches ")
+      }else{
+        try {
+          choices.removeChild(choicesList[i])
+        } catch (error) {
+          console.log(error)
+        }
+      }
     }
   }
 });
+
+// for(i=0;i<choicesList.length;i++){
+//   choicesList[i].className = current? console.log(current):""
+// }
