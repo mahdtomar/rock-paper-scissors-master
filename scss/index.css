@@ -75,8 +75,22 @@ body .container .dashboard span.score {
   white-space: wrap;
 }
 
+body .container .pc-turn {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  line-height: 2;
+  font-size: 30px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+body .container .pc-turn.visible {
+  opacity: 1;
+}
+
 body .container .choices {
-  background-color: red;
   max-width: 600px;
   width: 60vw;
   margin: 0px auto;
@@ -86,6 +100,12 @@ body .container .choices {
       grid-template-rows: repeat(2, 1fr);
   -ms-grid-columns: (25%)[4];
       grid-template-columns: repeat(4, 25%);
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 body .container .choices div {
@@ -106,12 +126,6 @@ body .container .choices div {
       justify-self: center;
   justify-items: center;
   justify-content: center;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
 }
 
 body .container .choices div svg {
@@ -162,6 +176,11 @@ body .container .choices div:hover {
 
 body .container .choices div:hover svg path {
   fill: white;
+}
+
+body .container .choices.away {
+  -webkit-animation-name: fadeAway;
+          animation-name: fadeAway;
 }
 
 body .container button.rules {
@@ -218,16 +237,20 @@ body .blackscreen {
 }
 
 @-webkit-keyframes fadeAway {
+  0% {
+    opacity: 1;
+  }
   100% {
-    display: none;
-    opacity: 0px;
+    opacity: 0;
   }
 }
 
 @keyframes fadeAway {
+  0% {
+    opacity: 1;
+  }
   100% {
-    display: none;
-    opacity: 0px;
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=index.css.map */
