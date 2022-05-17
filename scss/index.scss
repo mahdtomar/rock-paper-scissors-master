@@ -351,15 +351,46 @@ body {
 @media only screen and (max-width: 320px) {
   body{
     .container{
+      .dashboard{
+        border: 1px solid white;
+        padding: 5px;
+        width: 95%;
+        margin: 30px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        span {
+          border-radius: 10px;
+          font-weight: bold;
+          font-size: 30px;
+          &.word {
+            padding: 20px;
+            background-color: white;
+            color: rgba(31, 55, 86, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          &.title {
+            padding: 10px;
+            text-transform: uppercase;
+            width: 5px;
+            font-size: 30px;
+            line-height: 0.8;
+            white-space: wrap;
+          }
+      }
       .choices{
         width: 99%;
         div{
           border: 10px solid ;
-          width: 130px;
-          height: 130px;
+          width: 120px;
+          height: 120px;
         }
       }
     }
   }
 }
 
+}

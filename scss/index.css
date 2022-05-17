@@ -469,13 +469,57 @@ body .overview {
 }
 
 @media only screen and (max-width: 320px) {
-  body .container .choices {
+  body .container .dashboard {
+    border: 1px solid white;
+    padding: 5px;
+    width: 95%;
+    margin: 30px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10px;
+  }
+  body .container .dashboard span {
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  body .container .dashboard span.word {
+    padding: 20px;
+    background-color: white;
+    color: #1f3756;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .container .dashboard span.title {
+    padding: 10px;
+    text-transform: uppercase;
+    width: 5px;
+    font-size: 30px;
+    line-height: 0.8;
+    white-space: wrap;
+  }
+  body .container .dashboard .choices {
     width: 99%;
   }
-  body .container .choices div {
+  body .container .dashboard .choices div {
     border: 10px solid;
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
   }
 }
 /*# sourceMappingURL=index.css.map */
