@@ -3,7 +3,7 @@
   margin: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: bold;
 }
 
@@ -210,7 +210,8 @@ body > .container .choices.results div {
   height: 200px;
 }
 
-body > .container .choices .playercontainer, body > .container .choices .computer {
+body > .container .choices .playercontainer,
+body > .container .choices .computer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,7 +228,8 @@ body > .container .choices .playercontainer, body > .container .choices .compute
           align-items: center;
 }
 
-body > .container .choices .playercontainer p, body > .container .choices .computer p {
+body > .container .choices .playercontainer p,
+body > .container .choices .computer p {
   line-height: 2;
   white-space: nowrap;
   margin-bottom: 10px;
@@ -337,6 +339,140 @@ body .overview {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body .container .dashboard {
+    width: 60%;
+  }
+  body .container .choices {
+    width: 80vw;
+  }
+  body .container .choices.results {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  body .rulesdiv {
+    width: 80%;
+    height: auto;
+    background-color: #eee;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+  body .rulesdiv img {
+    width: 90%;
+    padding: 30px 0px;
+  }
+  body .container {
+    width: 100%;
+  }
+  body .container button.rules {
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: transparent;
+    padding: 10px 30px;
+    width: 70%;
+    height: 50px;
+    font-size: larger;
+    position: absolute;
+    left: 50%;
+    top: 92vh;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    cursor: pointer;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+  }
+  body .container button.rules:hover {
+    background-color: white;
+    color: #1f3756;
+  }
+  body .container .dashboard {
+    margin: 30px auto;
+    width: 90%;
+  }
+  body .container .choices {
+    width: 90vw;
+  }
+  body .container .choices div {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: #d2cece;
+    border-radius: 50%;
+    border: 15px solid;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  body .container .choices.results {
+    width: 90%;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  body .container .choices.results .tryagain {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  body .container .choices.results div {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: #d2cece;
+    border-radius: 50%;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    justify-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body .container .choices {
+    width: 99%;
+  }
+  body .container .choices div {
+    border: 10px solid;
+    width: 130px;
+    height: 130px;
   }
 }
 /*# sourceMappingURL=index.css.map */
