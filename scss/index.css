@@ -18,7 +18,7 @@ body {
   position: relative;
 }
 
-body .container {
+body > .container {
   width: 100%;
   max-width: 1440px;
   margin: 0px auto;
@@ -26,11 +26,11 @@ body .container {
   height: 100vh;
 }
 
-body .container hr {
+body > .container hr {
   opacity: 0;
 }
 
-body .container .dashboard {
+body > .container .dashboard {
   border: 1px solid white;
   padding: 5px;
   width: 40%;
@@ -47,13 +47,13 @@ body .container .dashboard {
   border-radius: 10px;
 }
 
-body .container .dashboard span {
+body > .container .dashboard span {
   border-radius: 10px;
   font-weight: bold;
   font-size: 30px;
 }
 
-body .container .dashboard span.word {
+body > .container .dashboard span.word {
   padding: 40px;
   background-color: white;
   color: #1f3756;
@@ -69,13 +69,13 @@ body .container .dashboard span.word {
           align-items: center;
 }
 
-body .container .dashboard span.score {
+body > .container .dashboard span.score {
   padding: 10px;
   width: 5px;
   white-space: wrap;
 }
 
-body .container .pc-turn {
+body > .container .pc-turn {
   margin: auto;
   width: 100%;
   text-align: center;
@@ -86,11 +86,11 @@ body .container .pc-turn {
   transition: opacity 0.3s;
 }
 
-body .container .pc-turn.visible {
+body > .container .pc-turn.visible {
   opacity: 1;
 }
 
-body .container .choices {
+body > .container .choices {
   max-width: 600px;
   width: 60vw;
   margin: 0px auto;
@@ -108,7 +108,7 @@ body .container .choices {
           animation-iteration-count: 1;
 }
 
-body .container .choices div {
+body > .container .choices div {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -128,16 +128,16 @@ body .container .choices div {
   justify-content: center;
 }
 
-body .container .choices div svg {
+body > .container .choices div svg {
   z-index: 1;
 }
 
-body .container .choices div svg path {
+body > .container .choices div svg path {
   -webkit-transition: fill 0.3s;
   transition: fill 0.3s;
 }
 
-body .container .choices div.rock {
+body > .container .choices div.rock {
   border-color: #f44336;
   -webkit-box-shadow: inset 5px 5px 0 0 grey, 5px 5px 0 0 #c2160a;
           box-shadow: inset 5px 5px 0 0 grey, 5px 5px 0 0 #c2160a;
@@ -148,7 +148,7 @@ body .container .choices div.rock {
       grid-row-start: 2;
 }
 
-body .container .choices div.paper {
+body > .container .choices div.paper {
   border-color: #2196f3;
   -ms-grid-column: 1;
       grid-column-start: 1;
@@ -159,7 +159,7 @@ body .container .choices div.paper {
           box-shadow: inset 5px 5px 0 0 grey, 5px 5px 0 0 #0961aa;
 }
 
-body .container .choices div.scissors {
+body > .container .choices div.scissors {
   border-color: #ffc107;
   -ms-grid-column: 3;
       grid-column-start: 3;
@@ -170,20 +170,97 @@ body .container .choices div.scissors {
           box-shadow: inset 5px 5px 0 0 grey, 5px 5px 0 0 #b38600;
 }
 
-body .container .choices div:hover {
+body > .container .choices div:hover {
   cursor: pointer;
 }
 
-body .container .choices div:hover svg path {
+body > .container .choices div:hover svg path {
   fill: white;
 }
 
-body .container .choices.away {
+body > .container .choices.away {
   -webkit-animation-name: fadeAway;
           animation-name: fadeAway;
 }
 
-body .container button.rules {
+body > .container .choices.results {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 1000px;
+  margin: auto;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+body > .container .choices.results div {
+  width: 200px;
+  height: 200px;
+}
+
+body > .container .choices .playercontainer, body > .container .choices .computer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body > .container .choices .playercontainer p, body > .container .choices .computer p {
+  line-height: 2;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+body > .container .choices .tryagain {
+  padding: 20px;
+}
+
+body > .container .choices .tryagain span {
+  white-space: nowrap;
+  text-align: center;
+  display: block;
+  font-size: 30px;
+  line-height: 3;
+}
+
+body > .container .choices .tryagain button {
+  display: block;
+  margin: auto;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: transparent;
+  padding: 10px 30px;
+  font-size: larger;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+body > .container .choices .tryagain button:hover {
+  background-color: white;
+  color: #1f3756;
+}
+
+body > .container button.rules {
   color: white;
   border: 2px solid white;
   border-radius: 10px;
@@ -200,7 +277,7 @@ body .container button.rules {
   transition: background 0.3s;
 }
 
-body .container button.rules:hover {
+body > .container button.rules:hover {
   background-color: white;
   color: #1f3756;
 }
@@ -234,6 +311,10 @@ body .blackscreen {
   z-index: 99;
   top: 0px;
   left: 0px;
+}
+
+body .overview {
+  display: none;
 }
 
 @-webkit-keyframes fadeAway {

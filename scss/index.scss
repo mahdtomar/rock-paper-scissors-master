@@ -17,7 +17,7 @@ body {
   overflow: hidden;
   color: white;
   position: relative;
-  .container {
+  >.container {
     width: 100%;
     max-width: 1440px;
     margin: 0px auto;
@@ -130,6 +130,58 @@ body {
         animation-name: fadeAway;
         
       }
+      &.results{
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: repeat(3,1fr);
+        width: 1000px;
+        margin: auto;
+        grid-template-rows: 1fr;
+        div {
+          width: 200px;
+          height: 200px;
+        }
+      }
+      .playercontainer,.computer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: center;
+        align-items: center;
+        p{
+          line-height: 2;
+          white-space: nowrap;
+          margin-bottom: 10px;
+          font-size: 30px;
+        }
+      } 
+      .tryagain{
+        padding: 20px;
+        span{
+          white-space: nowrap;
+          text-align: center;
+          display: block;
+          font-size: 30px;
+          line-height: 3;
+        }
+        button{
+          display: block;
+          margin: auto;
+          color: white;
+          border: 2px solid white;
+          border-radius: 10px;
+          background: transparent;
+          padding: 10px 30px;
+          font-size: larger;
+          cursor: pointer;
+          transition: background 0.3s;
+          &:hover {
+            background-color: white;
+            color: rgba(31, 55, 86, 1);
+          }
+        }
+      }
     }
     button.rules {
       color: white;
@@ -172,6 +224,10 @@ body {
     top: 0px;
     left: 0px;
   }
+  .overview{
+    display: none;
+  }
+
 }
 @keyframes fadeAway {
   0%{
