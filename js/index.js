@@ -109,7 +109,6 @@ choices.addEventListener("click", (e) => {
       currentScore < 0 ? (currentScore = 0) : "";
       score.innerHTML = currentScore;
     }
-    scoreCount();
     setTimeout(() => {
       // adding (ps's choice) while the div is not visible
       choices.classList.add("results");
@@ -121,6 +120,7 @@ choices.addEventListener("click", (e) => {
     setTimeout(() => {
       // showing the div after adding pc's choice
       loadingMsg.classList.remove("visible");
+      scoreCount();
       choices.classList.remove("away");
     }, 1000);
   }
