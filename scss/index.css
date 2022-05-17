@@ -356,7 +356,7 @@ body .overview {
 
 @media only screen and (max-width: 425px) {
   body {
-    overflow-y: scroll;
+    overflow-y: visible;
   }
   body .rulesdiv {
     width: 80%;
