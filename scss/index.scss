@@ -261,6 +261,7 @@ body {
 // large mobiles view
 @media only screen and (max-width: 425px) {
   body {
+    overflow-y: scroll;
     .rulesdiv {
       width: 80%;
       height: auto;
