@@ -275,7 +275,7 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 100;
-      img{
+      img {
         width: 90%;
         padding: 30px 0px;
       }
@@ -325,12 +325,12 @@ body {
           width: 90%;
           grid-template-columns: 1fr 1fr;
           grid-template-rows: 1fr 1fr;
-          .tryagain{
+          .tryagain {
             grid-column-start: 1;
             grid-column-end: 3;
             grid-row: 2;
           }
-          div{
+          div {
             display: grid;
             justify-content: center;
             align-items: center;
@@ -349,9 +349,9 @@ body {
 }
 
 @media only screen and (max-width: 320px) {
-  body{
-    .container{
-      .dashboard{
+  body {
+    .container {
+      .dashboard {
         border: 1px solid white;
         padding: 5px;
         width: 95%;
@@ -380,17 +380,16 @@ body {
             line-height: 0.8;
             white-space: wrap;
           }
-      }
-      .choices{
-        width: 99%;
-        div{
-          border: 10px solid ;
-          width: 120px;
-          height: 120px;
+        }
+        .choices {
+          width: 99%;
+          div {
+            border: 10px solid;
+            width: 120px;
+            height: 120px;
+          }
         }
       }
     }
   }
-}
-
 }
