@@ -17,7 +17,7 @@ const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 const msg = document.querySelector(".msg");
-const reset = document.querySelector(".reset")
+const reset = document.querySelector(".reset");
 let score = document.querySelector(".results");
 let rockClone = rock.cloneNode(true);
 let paperClone = paper.cloneNode(true);
@@ -125,11 +125,11 @@ choices.addEventListener("click", (e) => {
     }, 1000);
   }
 });
-reset.addEventListener("click",()=>{
-  choices.classList.remove("results")
-  choices.innerHTML=''
-  choices.appendChild(rock)
-  choices.appendChild(scissors)
-  choices.appendChild(paper)
-  computerText.removeChild(computerText.children[1])
-})
+reset.addEventListener("click", () => {
+  choices.classList.remove("results");
+  choices.innerHTML = "";
+  choices.appendChild(rock);
+  choices.appendChild(scissors);
+  choices.appendChild(paper);
+  computerText.removeChild(computerText.children[1]);
+});
