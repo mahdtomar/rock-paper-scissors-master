@@ -104,7 +104,6 @@ choices.addEventListener("click", (e) => {
       player == "s" && pc == "p" ? (msg.innerHTML = "You Win") : "";
       //draw
       player == pc ? (msg.innerHTML = "It's A Draw") : "";
-
       // changing the score
       let currentScore = +score.innerHTML;
       msg.innerHTML == "You Win" ? (currentScore += 1) : "";
