@@ -398,7 +398,7 @@ body .overview {
     font-size: larger;
     position: absolute;
     left: 50%;
-    top: 92vh;
+    top: 90%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     cursor: pointer;
