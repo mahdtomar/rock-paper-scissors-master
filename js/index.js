@@ -22,7 +22,9 @@ let score = document.querySelector(".results");
 let rockClone = rock.cloneNode(true);
 let paperClone = paper.cloneNode(true);
 let scissorsClone = scissors.cloneNode(true);
+
 score.innerHTML = 0;
+
 const results = document.querySelector(".tryagain");
 blackScreen.setAttribute("class", "blackscreen");
 rulesDiv.appendChild(rulesImg);
@@ -44,8 +46,8 @@ blackScreen.addEventListener("click", () => {
 choices.addEventListener("click", (e) => {
   let currentTag = e.target.tagName;
   let current;
+  // to make sure the user click on the choices only
   if (e.target.className !== "choices") {
-    // to make sure the user click on the choices only
     switch (
       currentTag // to get the div element even if the user clicked the svg or the path
     ) {
@@ -70,6 +72,7 @@ choices.addEventListener("click", (e) => {
     choices.classList.add("away");
     loadingMsg.classList.add("visible");
     function generateRandom(min = 1, max = 10) {
+      // to get a randome number between 1 and 9
       let difference = max - min;
       let rand = Math.random();
       rand = Math.floor(rand * difference);
@@ -126,6 +129,7 @@ choices.addEventListener("click", (e) => {
   }
 });
 reset.addEventListener("click", () => {
+  // resetting the game
   choices.classList.remove("results");
   choices.innerHTML = "";
   choices.appendChild(rock);
