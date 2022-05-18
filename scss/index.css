@@ -17,6 +17,7 @@ body {
   background-size: cover;
   overflow: hidden;
   color: white;
+  height: 100vh;
   position: relative;
 }
 
@@ -465,6 +466,16 @@ body .overview {
         justify-self: center;
     justify-items: center;
     justify-content: center;
+  }
+}
+
+@media only screen and (max-height: 780px) {
+  body .container .dashboard {
+    margin: 10px auto;
+  }
+  body .container button.rules {
+    position: absolute;
+    top: 90%;
   }
 }
 
