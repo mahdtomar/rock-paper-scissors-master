@@ -82,6 +82,15 @@ body {
       animation-duration: 0.5s;
       animation-fill-mode: forwards;
       animation-iteration-count: 1;
+      position: relative;
+      img {
+        position: absolute;
+        z-index: -1;
+        width: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
       div {
         display: grid;
         justify-content: center;
@@ -195,9 +204,9 @@ body {
       background: transparent;
       padding: 10px 30px;
       font-size: larger;
-      position: relative;
-      left: 90%;
-      top: 2%;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
       transform: translateX(-50%);
       cursor: pointer;
       transition: background 0.3s;
@@ -248,6 +257,7 @@ body {
     .container {
       .dashboard {
         width: 60%;
+        margin: 10px auto;
       }
       .choices {
         width: 80vw;
@@ -282,25 +292,25 @@ body {
       }
     }
     .container {
-      button.rules {
-        color: white;
-        border: 2px solid white;
-        border-radius: 10px;
-        background: transparent;
-        padding: 10px 30px;
-        width: 70%;
-        height: 50px;
-        font-size: larger;
-        position: absolute;
-        left: 50%;
-        top: 90%;
-        transform: translateX(-50%);
-        cursor: pointer;
-        transition: background 0.3s;
-        &:hover {
-          background-color: white;
-          color: rgba(31, 55, 86, 1);
-        }
+        button.rules {
+          color: white;
+          border: 2px solid white;
+          border-radius: 10px;
+          background: transparent;
+          padding: 10px 30px;
+          width: 70%;
+          height: 50px;
+          font-size: larger;
+          position: relative;
+          left: 50%;
+
+          transform: translateX(-50%);
+          cursor: pointer;
+          transition: background 0.3s;
+          &:hover {
+            background-color: white;
+            color: rgba(31, 55, 86, 1);
+          }
       }
       width: 100%;
       .dashboard {
@@ -354,17 +364,16 @@ body {
   }
 }
 
-@media only screen and (max-height: 780px) {
-  body{
-    .container{
-      .dashboard{
+@media only screen and (max-height: 780px) and (max-width: 700px) {
+  body {
+    .container {
+      .dashboard {
         margin: 10px auto;
       }
       button.rules {
         position: absolute;
         top: 90%;
       }
-
     }
   }
 }
