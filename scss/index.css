@@ -544,4 +544,11 @@ body .overview {
     height: 120px;
   }
 }
+
+@media (max-height: 750px) {
+  body .container .dashboard {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
 /*# sourceMappingURL=index.css.map */
